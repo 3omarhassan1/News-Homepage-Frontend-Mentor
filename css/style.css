@@ -1,0 +1,263 @@
+/* start global rules */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+:root {
+  --maincolor: hsl(35, 77%, 62%);
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  --pcolor: #666;
+  --rad: 20px;
+  --pad: 60px;
+  --dark: #1e1e1e;
+  --darker: #121212;
+}
+
+.dark {
+  --maincolor: #3498DB;
+  --textcolor: #fff;
+  --pcolor: #a4a4a4;
+  --testcolor: #242424;
+  --opa: 10%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bgcolor);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--maincolor);
+  opacity: 0.7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--textcolor);
+  background-color: var(--bgcolor);
+}
+
+section {
+  position: relative;
+  padding: 40px 0;
+}
+
+span {
+  color: var(--maincolor);
+  /* transition: var(--trans); */
+}
+
+p {
+  color: var(--pcolor);
+  font-size: 14px;
+  /* margin: 0;
+  line-height: 1.6; */
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+button {
+  color: inherit;
+  background-color: var(--maincolor);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 100px
+}
+
+button:hover {
+  background-color: #fff;
+}
+
+button:hover a {
+  color: var(--maincolor);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* end global rules */
+
+/* start my framework */
+
+/* .container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.shad {
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.my-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* end my framework */
+
+header a {
+  color: var(--pcolor);
+  font-weight: 500;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+header a:hover {
+  color: var(--Soft-orange);
+}
+
+.menu-icon,
+.close-icon {
+  cursor: pointer;
+}
+
+@media (max-width:767px) {
+  .links {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: -350px;
+    top: 0;
+    background-color: #fff;
+    width: 350px;
+    height: 100vh;
+    padding: 10rem 2rem;
+    font-size: 1.4rem;
+    box-shadow: rgba(0, 0, 0, 0.2) -2px 0px 10px 0px;
+    z-index: 1;
+  }
+
+  .links.open {
+    right: 0;
+  }
+
+  .links img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+  }
+
+  .links a::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: -2rem;
+    background-color: var(--Soft-orange);
+    height: 1px;
+    width: 350px;
+  }
+
+  .links a:first-of-type::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -2rem;
+    background-color: var(--Soft-orange);
+    height: 1px;
+    width: 350px;
+  }
+
+  .links a:hover {
+    padding-left: 1rem;
+  }
+}
+
+.first h1 {
+  font-weight: 900;
+  letter-spacing: .1px;
+  color: rgb(0, 0, 24);
+}
+
+.first a {
+  background-color: var(--Soft-red);
+  color: white;
+  width: fit-content;
+  padding: .5em 2em;
+}
+
+.second {
+  background-color: rgb(0, 0, 24);
+}
+
+.second h2 {
+  color: var(--Soft-orange);
+}
+
+.second h3 {
+  color: white;
+}
+
+.second p {
+  color: #999;
+}
+
+hr {
+  opacity: 1;
+  background-color: #777;
+  height: 1px;
+  border: none;
+}
+
+.items img {
+  width: 80px;
+}
+
+.items .txt :first-child {
+  color: #999;
+}
+
+.items h5 {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.attribution {
+  background-color: var(--maincolor);
+  width: 100%;
+  text-align: center;
+  color: rgb(0, 0, 24);
+  padding: .6em;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.attribution a:hover {
+  color: hsl(5, 77%, 31%);
+}
